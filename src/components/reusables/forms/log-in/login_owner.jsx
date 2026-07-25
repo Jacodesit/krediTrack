@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { DialogFooter } from "@/components/ui/dialog"
 
-function LoginOwnerForm() {
+function LoginOwnerForm({ close }) {
     return (
         <div className="flex flex-col gap-2 ">
             <form>
@@ -34,23 +34,31 @@ function LoginOwnerForm() {
                     </div>
                 </div>
 
-                <DialogFooter className="px-10 flex justify-end">
-                    <Button 
-                        variant="outline" 
+                <DialogFooter className="px-10 flex items-center justify-between gap-2">
+                    <Button
+                        variant="secondary"
                         className="p-5 text-xs"
-                        // onClick={handleClose}
                     >
-                        Cancel
+                        Forgot Password?
                     </Button>
+                    <div className="flex gap-2">
+                        <Button 
+                            variant="outline" 
+                            className="p-5 text-xs"
+                            onClick={close}
+                        >
+                            Cancel
+                        </Button>
 
-                    <Button 
-                        // disabled={!fullName || !storeName || !email || !phoneNumber || !password}
-                        // onClick={handleCreation}
-                        className="p-5 text-xs"
-                    >
-                        {/* {register ? 'Creating account...' : 'Create'} */}
-                        Login
-                    </Button>
+                        <Button 
+                            // disabled={!fullName || !storeName || !email || !phoneNumber || !password}
+                            // onClick={handleCreation}
+                            className="p-5 text-xs"
+                        >
+                            {/* {register ? 'Creating account...' : 'Create'} */}
+                            Login
+                        </Button>
+                    </div>
                 </DialogFooter>
             </form>
         </div>

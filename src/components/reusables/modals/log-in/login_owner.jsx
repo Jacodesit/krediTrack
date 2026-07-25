@@ -15,16 +15,13 @@ function LoginOwner({ open, close }) {
         >
             <DialogContent className="max-w-xl! w-full gap-0">
                 <DialogHeader className="p-6">
-                    <div className="flex items-center justify-between">
-                        <DialogTitle className="text-2xl font-medium">Hello, Welcome Back!</DialogTitle>
-                        
-                    </div>
+                    <img src="/images/kreditracker.png" alt="Kreditracker" className="h-8 w-30 mb-8" />
+                    <DialogTitle className="text-2xl font-medium">Hello, Welcome Back!</DialogTitle>
                     <DialogDescription>
-                        Sign in to securely access your account.
+                        Sign in to manage customer accounts, transactions, and store records.
                     </DialogDescription>
                 </DialogHeader>
-
-                <LoginOwnerForm />
+                <LoginOwnerForm close={close} />
             </DialogContent>
         </Dialog>
     )
