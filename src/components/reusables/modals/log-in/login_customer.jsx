@@ -16,12 +16,12 @@ function LoginCustomer({ open, close }) {
             <DialogContent className="max-w-xl! w-full gap-0">
                 <DialogHeader className="p-6">
                     <img src="/images/kreditracker.png" alt="Kreditracker" className="h-8 w-30 mb-8" />
-                    <DialogTitle className="text-2xl font-medium">Hello, Dear Customer!</DialogTitle>
+                    <DialogTitle className="text-2xl font-medium">No fluff. Just your balance and history.</DialogTitle>
                     <DialogDescription>
-                        Enter your access code to view your outstanding balance and payment history."                    
+                        Enter your email and access code to view your account details.                    
                     </DialogDescription>
                 </DialogHeader>
-                <LoginCustomerForm />
+                <LoginCustomerForm close={close}/>
             </DialogContent>
         </Dialog>
     )

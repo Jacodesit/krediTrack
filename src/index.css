@@ -163,3 +163,12 @@
 .dark #social .button-icon {
   filter: invert(1) brightness(2);
 }
+
+.otp-input {
+  width: 35px;
+  height: 37px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 8px;
+  text-align: center;
+  background: #ffffff;
+}
