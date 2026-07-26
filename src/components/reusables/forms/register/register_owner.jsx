@@ -63,7 +63,11 @@ function OwnerForm({close, showAlert, setShowAlert}) {
 
                 close()
             } else {
-                alert('Theres a problem creating account for owner!')
+                toast.add({
+                    type: "error",
+                    title: "Somethings wrong",
+                    description: "This email has been already registered!"
+                })
             }
         } catch (error) {
             console.error('Error:', error);

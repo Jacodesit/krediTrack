@@ -193,7 +193,6 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
     return (
         <section className={`relative transition-all duration-200 ${showAlert ? "blur-sm brightness-90 pointer-events-none h-full" : ""}`}>
             <section className="flex flex-col gap-2 px-6 mb-6">
-
                 <div className="flex flex-col gap-1">
                     <label htmlFor="full_name" className="font-medium">
                         Full Name
@@ -246,12 +245,11 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
                 </div>
 
                 <div className="flex flex-col gap-1">
-
                     <label htmlFor="access_code" className="font-medium">
                         Access Code
                     </label>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-col md:flex-row gap-2">
                         <Button
                             onClick={handleGenerate}
                             disabled={generating}
@@ -266,9 +264,8 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
                             value={accessCode}
                             readOnly
                             placeholder="Access Code"
-                            className="px-3 border rounded-md flex-1"
+                            className="p-2.5 md:px-3 border rounded-md flex-1"
                         />
-
                     </div>
 
                     <div className="border border-green-500 rounded-lg flex gap-2 p-2 mt-2 bg-green-100">

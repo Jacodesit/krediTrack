@@ -163,7 +163,7 @@
 .dark #social .button-icon {
   filter: invert(1) brightness(2);
 }
-
+/* 
 .otp-input {
   width: 35px;
   height: 37px;
@@ -172,3 +172,9 @@
   text-align: center;
   background: #ffffff;
 }
+
+@media screen and (max-width: 425px) {
+  .otp-input {
+    width: 10px;
+  }
+} */

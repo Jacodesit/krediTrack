@@ -24,7 +24,7 @@ function Register({register, onClose}) {
             open={register}
             onOpenChange={onClose}
         >
-            <DialogContent className="max-w-xl! w-full gap-0">
+            <DialogContent className="max-w-xl! w-full gap-0 h-screen overflow-y-auto md:h-auto">
                 <DialogHeader className="p-6">
                     <div className="flex items-center justify-between">
                         <DialogTitle className="text-2xl font-medium">Create an account</DialogTitle>

@@ -13,10 +13,10 @@ function LoginOwner({ open, close }) {
             open={open}
             onOpenChange={close}
         >
-            <DialogContent className="max-w-xl! w-full gap-0">
-                <DialogHeader className="p-6">
+            <DialogContent className="max-w-md! md:max-w-xl! gap-0">
+                <DialogHeader className="p-4 lg:p-6">
                     <img src="/images/kreditracker.png" alt="Kreditracker" className="h-8 w-30 mb-8" />
-                    <DialogTitle className="text-2xl font-medium">Pick up where you left off.</DialogTitle>
+                    <DialogTitle className="text-lg md:text-2xl font-medium">Pick up where you left off.</DialogTitle>
                     <DialogDescription>
                         Sign in to manage customer accounts, transactions, and store records.
                     </DialogDescription>

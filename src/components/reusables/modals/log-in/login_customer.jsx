@@ -13,10 +13,10 @@ function LoginCustomer({ open, close }) {
             open={open}
             onOpenChange={close}
         >
-            <DialogContent className="max-w-xl! w-full gap-0">
-                <DialogHeader className="p-6">
+            <DialogContent className="max-w-md! md:max-w-xl! gap-0">
+                <DialogHeader className="p-4 lg:p-6">
                     <img src="/images/kreditracker.png" alt="Kreditracker" className="h-8 w-30 mb-8" />
-                    <DialogTitle className="text-2xl font-medium">No fluff. Just your balance and history.</DialogTitle>
+                    <DialogTitle className="text-lg md:text-2xl font-medium">No fluff. Just your balance and history.</DialogTitle>
                     <DialogDescription>
                         Enter your email and access code to view your account details.                    
                     </DialogDescription>
