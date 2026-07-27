@@ -12,14 +12,14 @@ function Home() {
 
     const buttons = [
         {
-        text: 'Continue as Store Owner',
-        action: () => setLoginOwner(true),
-        hoverClass: 'hover:bg-green-100 hover:border-green-500 hover:text-green-700 hover:font-semibold'
+            text: 'Continue as Store Owner',
+            action: () => setLoginOwner(true),
+            hoverClass: 'hover:bg-green-100 hover:border-green-500 hover:text-green-700 hover:font-semibold'
         },
         {
-        text: 'View My Utang',
-        action: () => setLoginCustomer(true),
-        hoverClass: 'hover:bg-blue-100 hover:border-blue-500 hover:text-blue-700 hover:font-semibold'
+            text: 'View My Utang',
+            action: () => setLoginCustomer(true),
+            hoverClass: 'hover:bg-blue-100 hover:border-blue-500 hover:text-blue-700 hover:font-semibold'
         }
     ]
 

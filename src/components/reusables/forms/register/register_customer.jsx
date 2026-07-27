@@ -6,6 +6,7 @@ import { toast } from "@/components/ui/toast";
 import { jsPDF } from "jspdf";
 import { logoBase64 } from "@/assets/krediTrack";
 import { ConfirmCancel } from "../../alerts-dialog/register/confirm_cancel";
+import { formatAccessCode } from "@/utils/accessCode";
 
 function CustomerForm({ close, showAlert, setShowAlert }) {
     const [fullName, setFullName] = useState("");
@@ -34,8 +35,7 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
             }
 
             const data = await response.json();
-            const formattedCode = data.access_code.match(/.{1,3}/g).join("-")
-            setAccessCode(formattedCode);
+            setAccessCode(data.access_code);
 
         } catch (error) {
             console.error(error);
@@ -47,7 +47,7 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
 
     async function handleCreation(e) {
         e.preventDefault();
-
+        
         const customer = {
             full_name: fullName,
             email: email,
@@ -55,6 +55,8 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
             access_code: accessCode
         }
 
+        console.log(customer)
+        
         try {
             setCreating(true);
 
@@ -172,8 +174,7 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
         doc.setTextColor(39, 174, 96);
         doc.setFont("courier", "bold");
         doc.setFontSize(20);
-        doc.text(accessCode || "XXXX-XXXX", 28, 126);
-
+        doc.text(formatAccessCode(accessCode) || "XXX-XXX-XXX-XXX", 28, 126);
         doc.setTextColor(127, 140, 141);
         doc.setFont("helvetica", "italic");
         doc.setFontSize(10);
@@ -261,7 +262,7 @@ function CustomerForm({ close, showAlert, setShowAlert }) {
                         <input
                             id="access_code"
                             type="text"
-                            value={accessCode}
+                            value={formatAccessCode(accessCode)}
                             readOnly
                             placeholder="Access Code"
                             className="p-2.5 md:px-3 border rounded-md flex-1"

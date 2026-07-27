@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button"
 import {  Navigate, useNavigate } from "react-router-dom";
 
-function OwnerDashboard() {
+function CustomerDashboard() {
     const navigate = useNavigate();
-    const owner = JSON.parse(localStorage.getItem("owner"));
+    const customer = JSON.parse(localStorage.getItem("customer"));
 
-    if (!owner) {
+    if (!customer) {
         return <Navigate to="/" replace />
     }
     
@@ -15,14 +15,14 @@ function OwnerDashboard() {
     }
     return (
         <main>
-            <p>Hello, you're successfully redirected and logged in as store owner!</p>
+            <p>Hello, you're successfully redirected and logged in as customer!</p>
             <Button
                 onClick={handleLogout}
             >
-                Logout Owner
+                Logout Customer
             </Button>
         </main>
     )
 }
 
-export default OwnerDashboard
+export default CustomerDashboard

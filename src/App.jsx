@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
-import Dashboard from "./pages/owner/dashboard";
+import OwnerDashboard from "./pages/owner/dashboard";
+import CustomerDashboard from "./pages/customer/dashboard";
 
 function App() {
   return (
@@ -10,7 +11,12 @@ function App() {
       
       <Route 
         path="/owner/dashboard"
-        element={<Dashboard />}
+        element={<OwnerDashboard />}
+      />
+
+      <Route 
+        path="/customer/dashboard"
+        element={<CustomerDashboard />}
       />
     </Routes >
   )
